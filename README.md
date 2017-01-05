@@ -1,6 +1,8 @@
 # CedLikeUs for Joomla
 [CedLikeUs](https://www.galaxiis.com/cedlikeus-showcase/) for [Joomla!](https://www.joomla.org) display a popup inviting users to like your Joomla site in a nice way.
 
+![](CedLikeUs-3.png)
+
 * 3 style color (but more can be added on request)
 * Expiration date for liker
 * Expiration date for not liker
