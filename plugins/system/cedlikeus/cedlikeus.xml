@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+* @package     CedLikeUs
+* @subpackage  com_cedlikeus
+* @copyright   Copyright (C) 2013-2016 galaxiis.com All rights reserved.
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*
+* @license GNU GPL v3 (http://www.gnu.org/licenses/gpl.txt)
+-->
+<extension type="plugin" version="3.0" method="upgrade" group="system">
+    <name>CedLikeUs | Galaxiis.com</name>
+    <creationDate>2016-12-31</creationDate>
+
+    <copyright>Copyright (C) 2013-2016 galaxiis.com All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL 3.0</license>
+
+    <authorEmail>galaxiiscom@gmail.com</authorEmail>
+    <authorUrl>www.galaxiis.com</authorUrl>
+
+    <version>1.3.1</version>
+
+    <description>PLG_SYSTEM_CEDLIKEUS_XML_DESCRIPTION</description>
+
+    <files>
+        <filename plugin="cedlikeus">cedlikeus.php</filename>
+        <filename>index.html</filename>
+        <folder>language</folder>
+    </files>
+
+    <media>
+        <folder>plg_system_cedlikeus</folder>
+    </media>
+
+    <config addfieldpath="libraries/galaxiis/fields">
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="style" type="radio" default="red" label="PLG_SYSTEM_LIKEUS_STYLE"
+                       description="PLG_SYSTEM_LIKEUS_STYLE_DESC">
+                    <option value="red">PLG_SYSTEM_LIKEUS_SKIN_RED</option>
+                    <option value="blue">PLG_SYSTEM_LIKEUS_SKIN_BLUE</option>
+                    <option value="green">PLG_SYSTEM_LIKEUS_SKIN_GREEN</option>
+                </field>
+
+                <!-- also used in CSS -->
+                <!--<field name="counterFont" type="googlefont" default="Roboto+Condensed:700"-->
+                       <!--label="PLG_SYSTEM_LIKEUS_FONT"-->
+                       <!--description="PLG_SYSTEM_LIKEUS_FONT_DESC" >-->
+                    <!--<option value="Roboto+Condensed:700">Roboto+Condensed:700</option>-->
+                    <!--<option value="Tangerine">Tangerine</option>-->
+                    <!--<option value="Inconsolata">Inconsolata</option>-->
+                    <!--<option value="Shadows+Into+Light">Shadows IntoLight</option>-->
+                    <!--<option value="Audiowide">Audiowide</option>-->
+                    <!--<option value="Merienda+One">Merienda One</option>-->
+                    <!--<option value="Permanent+Marker">Permanent Marker</option>-->
+                <!--</field>-->
+
+
+                <field name="storage" type="radio" default="cookie" label="PLG_SYSTEM_LIKEUS_STORAGE"
+                       description="PLG_SYSTEM_LIKEUS_STORAGE_DESC">
+                    <option value="html5">PLG_SYSTEM_LIKEUS_STORAGE1</option>
+                    <option value="cookie">PLG_SYSTEM_LIKEUS_STORAGE2</option>
+                </field>
+
+                <field name="expiration-liking" type="text" default="365" label="PLG_SYSTEM_LIKEUS_LIKING"
+                       description="PLG_SYSTEM_LIKEUS_LIKING_DESC"/>
+
+                <field name="remind-not-liking" type="text" default="2" label="PLG_SYSTEM_LIKEUS_RETRY_NOT"
+                       description="PLG_SYSTEM_LIKEUS_RETRY_NOT_DESC"/>
+
+                <field name="facebook-account" type="text" default="galaxiiscom"
+                       label="PLG_SYSTEM_LIKEUS_ACCOUNT"
+                       required="false"
+                       translate_default="true"
+                       description="PLG_SYSTEM_LIKEUS_ACCOUNT_DESC"
+                       size="25"
+                        />
+
+            </fieldset>
+        </fields>
+    </config>
+
+    <config/>
+</extension>
